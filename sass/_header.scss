@@ -1,0 +1,16 @@
+.header {
+    background-image:
+    linear-gradient(
+        to right,
+        rgba($color-grey-light-1, .4),
+        rgba($color-grey-light-2, .4)),
+        url("../img/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    grid-column: full-start / full-end;
+
+    display: grid;
+    align-content: center;
+}

@@ -1,0 +1,44 @@
+//COLOR VARIABLES
+$color-primary: #191970;
+$color-primary-light: #3f8bd6;
+$color-primary-dark:#003366;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #333;
+$color-grey-dark-2: #777;
+$color-grey-dark-3: #999;
+
+// FONT VARIABLES
+$font-primary-jp: 'Noto Sans JP', sans-serif;
+$font-primary-en: 'Lato', sans-serif;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  // 1rem = 10px(10px / 16px -> 62.5)
+}
+
+body {
+    padding: 3rem;
+    font-family: $font-primary-jp;
+    font-weight: 300;
+    line-height: 1.6;
+    color: $color-grey-dark-1;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 80vh repeat(4, min-content);
+    grid-template-columns: [full-start] minmax(6rem,1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; // 1140 / 8 = 142.5 -> 140px
+    grid-row-gap: 3rem;
+    grid-column-gap: 2rem;
+}

@@ -1,0 +1,12 @@
+%heading {
+    font-family: $font-primary-jp;
+    font-weight: 400;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: $color-grey-dark-1;
+    text-transform: uppercase;
+}
