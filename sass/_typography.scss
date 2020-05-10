@@ -1,12 +1,26 @@
 %heading {
     font-family: $font-primary-jp;
     font-weight: 400;
+    font-family: "Lato", sans-serif;
 }
 
 .heading-1 {
     @extend %heading;
-    font-size: 4.5rem;
+    font-size: 6rem;
     font-weight: 700;
     color: $color-grey-dark-1;
     text-transform: uppercase;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: 4.5rem;
+    font-weight: 600;
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: $color-grey-dark-2;
 }
