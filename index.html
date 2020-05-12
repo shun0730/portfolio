@@ -4,13 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Noto+Sans+JP:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Noto+Sans+JP:300,400,700|Courgette:400" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <title>Shunsuke&#39;s portfolio</title>
     </head>
     <body class="container">
         <header class="header">
-            <h1 class="heading-1">
+            <h1 class="heading-1 header__title">
                 Shunsuke Nagashima
             </h1>
         </header>
@@ -47,10 +47,8 @@
                     </h3>
                     <p class="about__paragraph">
                         大学を卒業後、3年間は北海道の公立高校で英語教諭として働いていましたが、エンジニアという職への憧れから転職を決意。
-                        2019年4月から、東京の通信系をメインとする企業に就職（勤務地は北海道）。<br><br>
+                        2019年4月から、東京の通信系をメインとする企業に就職（勤務地は北海道）。<br>
                         業務では、VB.NET等を用いたWindowsアプリの作成に携わることが多いですが、個人的な興味としては、WEBアプリを作成したいという思いが強いです。<br><br>
-                        転職を決めてから、HTML・CSSの基本を学んでから、Ruby・Ruby on Railsの学習を始めました（当時とても勢いがあったし、できることが多そうだったから）。<br>
-                        現在は、CSS3・JavaScript・Reactなど、フロントエンドの学習に力を入れており、学習の一環と、今後の成果物を掲載するために、本サイトを作成することとしました。<br><br>
 
                         と、堅苦しいことも書きましたが...
                     </p>
@@ -66,18 +64,125 @@
                         <li class="about__item">Apple好き（性能面というより、かっこよさ重視）</li>
                     </ul>
                 </div>
-
-
             </div>
         </section>
 
-        <section class="skill">
-            Skills
-        </section>
+        <section class="skills">
+            <h2 class="heading-2 skills__title">
+                Skills
+            </h2>
+            <div class="skill">
+                <svg>
+                    <use xlink:href="img/sprite.svg#icon-html5"></use>
+                </svg>
+                <h4 class="skill__name">HTML5</h4>
+                <div class="skill__experience">
+                    <p>経験 &colon; 1年</p>
+                    <p>基本的なマークアップは可能</p>
+                </div>
+            </div>
+
+            <div class="skill">
+                <svg>
+                    <use xlink:href="img/sprite.svg#icon-css3"></use>
+                </svg>
+                <h4 class="skill__name">CSS3</h4>
+                <div class="skill__experience">
+                    <p>経験 &colon; 半年</p>
+                    <p>flex-box, CSS-gridを用いたスタイリングが可能。レスポンシブ対応もできます。</p>
+                </div>
+            </div>
+
+            <div class="skill">
+                <svg>
+                    <use xlink:href="img/sprite.svg#icon-sass"></use>
+                </svg>
+                <h4 class="skill__name">SASS</h4>
+                <div class="skill__experience">
+                    <p>経験 &colon; 半年</p>
+                    <p>SCSSでの基本的なコーディングができます。</p>
+                </div>
+            </div>
+
+            <div class="skill">
+                <svg>
+                    <use xlink:href="img/sprite.svg#icon-ruby"></use>
+                </svg>
+                <h4 class="skill__name">Ruby</h4>
+                <div class="skill__experience">
+                    <p>経験年数 &colon; 1年</p>
+                    <p>ベンダーの資格も所有しており、基本的な構文は理解しています。簡単なゲーム等作成できます。</p>
+                </div>
+            </div>
+
+            <div class="skill">
+                <svg>
+                    <use xlink:href="img/sprite.svg#icon-rails"></use>
+                </svg>
+                <h4 class="skill__name">Ruby on Rails</h4>
+                <div class="skill__experience">
+                    <p>経験年数 &colon; 1年</p>
+                    <p>CRUD処理、ログイン機能などは自分で実装可能</p>
+                </div>
+            </div>
+
+            <div class="skill">
+                <svg>
+                    <use xlink:href="img/sprite.svg#icon-javascript"></use>
+                </svg>
+                <h4 class="skill__name">JavaScript</h4>
+                <div class="skill__experience">
+                    <p>経験年数 &colon; 1年</p>
+                    <p>ES6でのコーディング可能です。基本的な構文は理解します。</p>
+                </div>
+            </div>
+
+            <div class="skill">
+                <svg>
+                    <use xlink:href="img/sprite.svg#icon-react"></use>
+                </svg>
+                <h4 class="skill__name">React</h4>
+                <div class="skill__experience">
+                    <p>経験年数 &colon; 半年</p>
+                    <p>今一番力を入れて学習している分野です。Reduxを用いたステイト管理、Hooksを使用しての実装もできます。</p>
+                </div>
+            </div>
         </section>
 
         <section class="works">
-            Works
+            <h2 class="heading-2 works__title">
+                Works
+            </h2>
+            <div class="bg-video">
+                <video class="bg-video__content" autoplay muted loop>
+                    <source src="img/typing.mp4" type="video/mp4">
+                    <source src="img/typing.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="works__content">
+                <div class="work">
+                    <img src="" alt="Comming soon" class="work__img">
+                    <div class="work__texts">
+                        <a href="#" class="work__name">Work1</a>
+                        <a href="#" class="work__link">Visit</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="" alt="Comming soon" class="work__img">
+                    <div class="work__texts">
+                        <a href="#" class="work__name">Work2</a>
+                        <a href="#" class="work__link">Visit</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="" alt="Comming soon" class="work__img">
+                    <div class="work__texts">
+                        <a href="#" class="work__name">Work3</a>
+                        <a href="#" class="work__link">Visit</a>
+                    </div>
+                </div>
+
+            </div>
         </section>
         <footer class="footer">
             Footer

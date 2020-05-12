@@ -7,10 +7,19 @@
         url("../img/header.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 
     grid-column: full-start / full-end;
 
     display: grid;
-    align-content: center;
+    align-content: start;
+
+    &__title {
+        margin-left: 4rem;
+        // background-image: radial-gradient($color-primary-light, $color-primary);
+        // -webkit-background-clip: text;
+        // background-clip: text;
+        // color: transparent;
+        transform: rotate(-15deg);
+        transform-origin: center;
+    }
 }
