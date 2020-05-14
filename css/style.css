@@ -147,9 +147,8 @@ body {
   position: relative;
   grid-column: full-start / full-end;
   display: grid;
-  grid-template-rows: min-content  1fr;
-  grid-template-columns: minmax(6rem, 1fr) [content-start] 40% [content-end] minmax(6rem, 1fr);
-  grid-row-gap: 2rem; }
+  grid-template-rows: 1fr repeat(2, min-content) 1fr;
+  grid-template-columns: minmax(6rem, 1fr) [content-start] 60% [content-end] minmax(6rem, 1fr); }
   .works__title {
     grid-row: 1 / 2;
     grid-column: 1 / -1;
@@ -158,19 +157,78 @@ body {
   .works__content {
     grid-column: 2 / 3;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     align-items: center; }
 
 .work {
-  display: grid;
-  grid-template-rows: repeat(2, 10rem); }
+  height: 25rem;
+  position: relative; }
   .work__img {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
-    background-color: orangered; }
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
   .work__texts {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3; }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transform: translateY(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    z-index: 10;
+    transition: all .2s;
+    display: flex;
+    flex-direction: column; }
+    .work__texts--title {
+      font-size: 5rem;
+      font-weight: 700;
+      margin-bottom: 2rem; }
+    .work__texts--link:link, .work__texts--link:visited {
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+      font-size: 2.5rem;
+      border-radius: 3px;
+      background-image: radial-gradient(#3f8bd6, #191970);
+      transition: all .8s ease;
+      position: relative; }
+    .work__texts--link:hover, .work__texts--link:active {
+      background-image: none;
+      background-color: #fff;
+      color: #3f8bd6; }
+    .work__texts--link::before, .work__texts--link::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 2px;
+      width: 0;
+      background: #3f8bd6;
+      transition: 400ms ease all; }
+    .work__texts--link::after {
+      right: inherit;
+      top: inherit;
+      left: 0;
+      bottom: 0; }
+    .work__texts--link:hover::before, .work__texts--link:hover::after {
+      width: 100%;
+      transition: 800ms ease all; }
+  .work::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #777;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: all .8s; }
+  .work:hover .work__texts {
+    opacity: 1; }
+  .work:hover::after {
+    opacity: .8; }
 
 .footer {
   background-color: palevioletred; }
