@@ -16,6 +16,8 @@ $color-grey-dark-3: #999;
 $font-primary-jp: 'Noto Sans JP', sans-serif;
 $font-primary-en: 'Lato', sans-serif;
 
+
+// UNIVERSAL SETUP
 *,
 *::before,
 *::after {
@@ -40,6 +42,4 @@ body {
     display: grid;
     grid-template-rows: 85vh repeat(2, min-content) 100vh;
     grid-template-columns: [full-start] minmax(6rem,1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; // 1140 / 8 = 142.5 -> 140px
-    grid-row-gap: 5rem;
-    grid-column-gap: 2rem;
 }

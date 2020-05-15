@@ -1,3 +1,34 @@
 .footer {
-    background-color: palevioletred;
+   grid-column: full-start / full-end;
+   background-color: $color-grey-dark-2;
+   padding: 6rem;
+}
+
+.nav {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    &__item {
+        padding: 0 2rem;
+        position: relative;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #fff;
+        transition: all .2s;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+
+.copyright {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
 }
